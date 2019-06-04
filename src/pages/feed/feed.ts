@@ -36,13 +36,13 @@ export class FeedPage {
   ionViewDidLoad() {
     //this.somaDoisNumeros(10,90);
     //console.log('ionViewDidLoad FeedPage');
-    this.moovieProvider.getLatestMovies().subscribe(
+    this.moovieProvider.getLatestMovies().subscribe(// fica aguardando o browser retornar a página carregada
 
       data=>{// se conseguir pegar algum dado, ele cai nesse data e imprime esse dado que pegou
 
           const response = (data as any);//transformar o retorno do data em um tipo de qualquer coisa
           const objeto_retorno = JSON.parse(response._body);// transformar qualquer coisa em JSON para poder transformar em texto com o Agular
-          console.log(objeto_retorno);
+          console.log(objeto_retorno);// printando o json no console do navegador
           
           this.lista_filmes=objeto_retorno.results;// esse results vem do json
 
