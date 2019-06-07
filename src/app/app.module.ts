@@ -3,6 +3,7 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { CreateAccountPage } from './../pages/create-account/create-account';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -16,8 +17,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FeedPageModule } from '../pages/feed/feed.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
+import { UserListPageModule } from './../pages/user-list/user-list.module';
 import { MoovieProvider } from '../providers/moovie/moovie';
 import { UsersProvider } from '../providers/users/users';
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -26,14 +29,17 @@ import { UsersProvider } from '../providers/users/users';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    CreateAccountPage
+    
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     FeedPageModule,
     IntroPageModule,
-    HttpModule
+    HttpModule,
+    UserListPageModule
 
   ],
   bootstrap: [IonicApp],
@@ -43,14 +49,16 @@ import { UsersProvider } from '../providers/users/users';
     ContactPage,
     HomePage,
     TabsPage,
-    LoginPage
+    LoginPage,
+    CreateAccountPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MoovieProvider,
-    UsersProvider
+    UsersProvider,
+    AuthServiceProvider
   ]
 })
 export class AppModule {}

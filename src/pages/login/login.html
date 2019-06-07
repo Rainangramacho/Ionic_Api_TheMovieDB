@@ -1,3 +1,11 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Tela de Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
 <ion-content padding class="loginPage" scroll="false">
 
   <ion-grid style="height: 100%" >
@@ -13,7 +21,7 @@
       <ion-col >
           <ion-list inset >
               <ion-item >
-                <ion-input placeholder="Usuário" name="username" id="loginField" type="text" [(ngModel)]="model.email" > </ion-input>
+                <ion-input placeholder="Usuário" name="email" id="loginField" type="text" [(ngModel)]="model.email" > </ion-input>
               </ion-item>
           <ion-item>
               <ion-input placeholder="Senha" name="password" id="passwordField" type="password" [(ngModel)]="model.password" ></ion-input>
@@ -31,5 +39,5 @@
   </ion-grid>
   </ion-row>
   </ion-grid>
-  <a (click)="goToIntroPage()">Voltar</a>
+  
   </ion-content>

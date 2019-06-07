@@ -5,15 +5,21 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Bem vindo ao meu primeiro app em Ionic...</h2>
+  <h2>Bem vindo ao ShowTime</h2>
   <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    Esse aplicativo tem como objetivo disponibilizar uma maneira para que você
+    possa gerenciar as suas séries e filmes prediletas para que possa estar sempre atenado 
+    quando sair algum ep novo ou filme novo.
   </p>
   <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
+    Se você ja tem cadastro, é só clicar em "Login", caso ainda não tenha, clique em "Cadastrar-se".
+    É rapidinho, confia!
   </p>
-  <a (click)="goToIntroPage()">Voltar</a> <br>
-  <a (click)="goToLoginPage()">Ir para Login</a>
+  <br>
+  
+  <button ion-button block (click)="goToIntroPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >Voltar</button><br>
+  <button ion-button block (click)="goToLoginPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >Login</button><br>
+  <button ion-button block (click)="goToUsersListPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >Listar Usuários</button><br>
+  <button ion-button block (click)="goToCreateAccountPage()" style="width: 40%" class="submit-btn" fulltype="submit" >Cadastrar-se</button><br>
+  
 </ion-content>
