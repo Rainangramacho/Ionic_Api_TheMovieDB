@@ -4,7 +4,10 @@ import 'rxjs/add/operator/map';
  
 @Injectable()
 export class UsersProvider {
-  private API_URL = 'https://reqres.in/api/'
+  private API_URL_Login = 'http://localhost:5000/api/v1/users/login'
+  private API_URL_Register = 'http://localhost:5000/api/v1/users/register'
+  private API_URL = 'http://localhost:5000/api/v1/users/'
+  
  
   constructor(public http: Http) { }
  
@@ -15,7 +18,7 @@ export class UsersProvider {
         password: password
       };
  
-      this.http.post(this.API_URL + 'register', data)
+      this.http.post(this.API_URL_Register , data)
         .subscribe((result: any) => {
           resolve(result.json());
         },
@@ -32,7 +35,7 @@ export class UsersProvider {
         password: password
       };
  
-      this.http.post(this.API_URL + 'login', data)
+      this.http.post(this.API_URL_Login , data)
         .subscribe((result: any) => {
           resolve(result.json());
         },
