@@ -17,15 +17,18 @@
         <img src="/assets/imgs/logo.png"width="200px"height="200px">
       </ion-col>
     </ion-row >
-    <ion-row >
-      <ion-col >
-          <ion-list inset >
+    <ion-row  style="text-align:center">
+      <ion-col  >
+          <ion-list inset  >
               <ion-item >
+              
                 <ion-input placeholder="Usuário" name="email" id="loginField" type="text" [(ngModel)]="model.email" > </ion-input>
+                
               </ion-item>
           <ion-item>
               <ion-input placeholder="Senha" name="password" id="passwordField" type="password" [(ngModel)]="model.password" ></ion-input>
-          </ion-item></ion-list>
+          </ion-item>
+          </ion-list>
       </ion-col>
     </ion-row>
 

@@ -6,16 +6,18 @@ import 'rxjs/add/operator/map';
 export class UsersProvider {
   private API_URL_Login = 'http://localhost:5000/api/v1/users/login'
   private API_URL_Register = 'http://localhost:5000/api/v1/users/register'
+  private API_URL_ListUsers = 'http://localhost:5000/api/v1/users/userslist'
   private API_URL = 'http://localhost:5000/api/v1/users/'
   
  
   constructor(public http: Http) { }
  
-  createAccount(email: string, password: string) {
+  createAccount(name:string, email: string, password: string) {
     return new Promise((resolve, reject) => {
       var data = {
         email: email,
-        password: password
+        password: password,
+        name: name
       };
  
       this.http.post(this.API_URL_Register , data)
@@ -48,9 +50,9 @@ export class UsersProvider {
   getAll(page: number) {
     return new Promise((resolve, reject) => {
  
-      let url = this.API_URL + 'users/?per_page=10&page=' + page;
+      //let url = this.API_URL_ListUsers ;
  
-      this.http.get(url)
+      this.http.get(this.API_URL_ListUsers)
         .subscribe((result: any) => {
           resolve(result.json());
         },
