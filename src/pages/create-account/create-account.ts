@@ -1,6 +1,7 @@
 import { UsersProvider } from './../../providers/users/users';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
  
 @IonicPage()
 @Component({
@@ -21,7 +22,7 @@ export class CreateAccountPage {
     this.userProvider.createAccount(this.model.name,this.model.email, this.model.password)
       .then((result: any) => {
         this.toast.create({ message: 'Usuário criado com sucesso. Token: ' + result.token, position: 'botton', duration: 3000 }).present();
- 
+        return this.navCtrl.push(LoginPage);
         //Salvar o token no Ionic Storage para usar em futuras requisições.
         //Redirecionar o usuario para outra tela usando o navCtrl
         //this.navCtrl.pop();
