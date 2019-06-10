@@ -7,25 +7,25 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Filmes Populares</ion-title>
+    <ion-title>Séries Populares</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-<h1 class="feed_title"></h1> 
-  <ion-card *ngFor="let filme of lista_filmes">
+<h1 class="feedseries_title"></h1> 
+  <ion-card *ngFor="let series of lista_series">
 
     <ion-item>
-      <h2 class="feed_title">{{filme.original_title}}</h2><!-- Interpolação para que esse h1 possa receber o conteudo da variavel nome_usuario.-->
-      <p class="feed_date">Data de Lançamento {{filme.release_date}}</p>
+      <h2 class="feedseries_title">{{series.name}}</h2><!-- Interpolação para que esse h1 possa receber o conteudo da variavel nome_usuario.-->
+      <p class="feedseries_date">Média pelo TheMovieDb : {{series.vote_average}}</p>
     </ion-item>
 
-    <img [src]="'https://image.tmdb.org/t/p/w300/' + filme.backdrop_path"> <!-- w300 é o tamanho da imagem e backdrop é a imagem do filme(tipo um banner do filme)--> 
+    <img [src]="'https://image.tmdb.org/t/p/w300/' + series.backdrop_path"> <!-- w300 é o tamanho da imagem e backdrop é a imagem do filme(tipo um banner do filme)--> 
 
     <ion-card-content>
-      <p>{{filme.overview}}</p>
+      <p>{{series.overview}}</p>
     </ion-card-content>
 
     <ion-row>
@@ -43,7 +43,7 @@
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          11h ago
+          
         </ion-note>
       </ion-col>
     </ion-row>

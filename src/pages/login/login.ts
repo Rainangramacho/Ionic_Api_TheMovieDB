@@ -1,3 +1,4 @@
+import { PosLoginPage } from './../pos-login/pos-login';
 import { FeedPage } from './../feed/feed';
 import { UsersProvider } from './../../providers/users/users';
 import { Component } from '@angular/core';
@@ -20,12 +21,13 @@ export class LoginPage {
   goToIntroPage(){
     this.navCtrl.push(IntroPage)
 }
+
  
   login() {
     this.userProvider.login(this.model.email, this.model.password)
       .then((result: any) => {
         this.toast.create({ message: 'Usuário logado com sucesso. Token: ' + result.token, position: 'botton', duration: 3000 }).present();
-        return this.navCtrl.push(FeedPage);
+        return this.navCtrl.push(PosLoginPage);
         //Salvar o token no Ionic Storage para usar em futuras requisições.
         //Redirecionar o usuario para outra tela usando o navCtrl
         //this.navCtrl.pop();

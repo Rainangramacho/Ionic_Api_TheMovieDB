@@ -19,5 +19,7 @@ export class MoovieProvider {
   getLatestMovies(){
     return this.http.get(this.baseApiPath + "/movie/popular?api_key=156bfc7006a34bca4f14dd393981ad1b&language=pt-BR");//concatenando url do baseAipiPath com o complemento de outra url
   }
-
+  getLatestSeries(){
+    return this.http.get(this.baseApiPath + "/tv/popular?api_key=156bfc7006a34bca4f14dd393981ad1b&language=pt-BR");//concatenando url do baseAipiPath com o complemento de outra url
+  }
 }

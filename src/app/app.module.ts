@@ -1,3 +1,4 @@
+import { PosLoginPage } from './../pages/pos-login/pos-login';
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +17,8 @@ import {HttpModule} from "@angular/http";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FeedPageModule } from '../pages/feed/feed.module';
+import { FeedSeriesPageModule } from '../pages/feedseries/feedseries.module';
+
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { UserListPageModule } from './../pages/user-list/user-list.module';
 import { MoovieProvider } from '../providers/moovie/moovie';
@@ -30,13 +33,15 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     HomePage,
     TabsPage,
     LoginPage,
-    CreateAccountPage
+    CreateAccountPage,
+    PosLoginPage
     
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     FeedPageModule,
+    FeedSeriesPageModule,
     IntroPageModule,
     HttpModule,
     UserListPageModule
@@ -50,7 +55,8 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     HomePage,
     TabsPage,
     LoginPage,
-    CreateAccountPage
+    CreateAccountPage,
+    PosLoginPage
   ],
   providers: [
     StatusBar,

@@ -20,11 +20,11 @@ export class UserListPage {
     this.users = [];
     this.page = 1;
     this.infiniteScroll.enable(true);
-    this.getAllUsers(this.page);
+    this.getAllUsers();
   }
  
-  getAllUsers(page: number) {
-    this.userProvider.getAll(page)
+  getAllUsers() {
+    this.userProvider.getAll()
       .then((result: any) => {
         for (var i = 0; i < result.data.length; i++) {
           var user = result.data[i];
@@ -46,7 +46,7 @@ export class UserListPage {
   getUsers() {
     setTimeout(() => {
       this.page += 1;
-      this.getAllUsers(this.page);
+      this.getAllUsers();
     }, 500);
   }
  

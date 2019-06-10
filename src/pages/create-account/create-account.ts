@@ -12,9 +12,9 @@ export class CreateAccountPage {
  
   constructor(public navCtrl: NavController, public navParams: NavParams, private toast: ToastController, private userProvider: UsersProvider) {
     this.model = new User();
-    this.model.name = 'rararar';
-    this.model.email = 'sydney@fife';
-    this.model.password = 'pistol';
+    this.model.name = '';
+    this.model.email = '';
+    this.model.password = '';
   }
  
   createAccount() {

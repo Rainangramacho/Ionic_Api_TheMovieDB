@@ -4,6 +4,9 @@ import { IntroPage } from './../intro/intro';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { FeedPage } from '../feed/feed';
+import { FeedSeriesPage } from '../feedseries/feedseries';
+import { PosLoginPage } from '../pos-login/pos-login';
 
 
 
@@ -27,6 +30,15 @@ goToUsersListPage(){
 }
 goToCreateAccountPage(){
   this.navCtrl.push(CreateAccountPage)
+}
+goToFeedPage(){
+  this.navCtrl.push(FeedPage)
+}
+goToFeedSeriesPage(){
+  this.navCtrl.push(FeedSeriesPage)
+}
+goToPosLoginPage(){ // só pra testar se da pra ir pra pagina de pos login numa boa
+  this.navCtrl.push(PosLoginPage)
 }
 }
 

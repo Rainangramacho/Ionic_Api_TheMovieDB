@@ -8,24 +8,24 @@
  
 <ion-content padding>
  
-  <h1 text-center>Exemplo de criação de conta</h1>
-  
+  <h1 text-center>Cadastre-se!</h1>
+  <br> <br> 
 <ion-list>
   <ion-item>
       <ion-label stacked>Nome</ion-label>
-      <ion-input type="text" name="name" [(ngModel)]="model.name"></ion-input>
+      <ion-input type="text" name="name" [(ngModel)]="model.name" placeholder="Digite seu nome"></ion-input>
     </ion-item>
   </ion-list>
  
   <ion-list>
     <ion-item>
       <ion-label stacked>Email</ion-label>
-      <ion-input type="text" name="email" [(ngModel)]="model.email"></ion-input>
+      <ion-input type="text" name="email" [(ngModel)]="model.email" placeholder="Digite seu email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Senha</ion-label>
-      <ion-input type="password" name="password" [(ngModel)]="model.password"></ion-input>
+      <ion-input type="password" name="password" [(ngModel)]="model.password" placeholder="Digite sua senha"></ion-input>
     </ion-item>
   </ion-list>
  

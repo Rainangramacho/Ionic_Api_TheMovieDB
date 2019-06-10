@@ -47,7 +47,7 @@ export class UsersProvider {
     });
   }
  
-  getAll(page: number) {
+  getAll() {
     return new Promise((resolve, reject) => {
  
       //let url = this.API_URL_ListUsers ;
