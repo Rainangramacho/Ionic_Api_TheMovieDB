@@ -1,5 +1,5 @@
 import { CreateAccountPage } from '../create-account/create-account';
-import { UserListPage } from './../user-list/user-list';
+//import { UserListPage } from './../user-list/user-list';
 import { IntroPage } from './../intro/intro';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
@@ -25,9 +25,9 @@ export class HomePage {
 goToLoginPage(){
   this.navCtrl.push(LoginPage)
 }
-goToUsersListPage(){
+/* goToUsersListPage(){
   this.navCtrl.push(UserListPage)
-}
+} */
 goToCreateAccountPage(){
   this.navCtrl.push(CreateAccountPage)
 }

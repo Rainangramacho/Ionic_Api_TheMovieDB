@@ -20,10 +20,10 @@ import { FeedPageModule } from '../pages/feed/feed.module';
 import { FeedSeriesPageModule } from '../pages/feedseries/feedseries.module';
 
 import { IntroPageModule } from '../pages/intro/intro.module';
-import { UserListPageModule } from './../pages/user-list/user-list.module';
+//import { UserListPageModule } from './../pages/user-list/user-list.module';
 import { MoovieProvider } from '../providers/moovie/moovie';
 import { UsersProvider } from '../providers/users/users';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+//import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 
 @NgModule({
   declarations: [
@@ -43,8 +43,8 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     FeedPageModule,
     FeedSeriesPageModule,
     IntroPageModule,
-    HttpModule,
-    UserListPageModule
+    HttpModule
+    //UserListPageModule
 
   ],
   bootstrap: [IonicApp],
@@ -64,7 +64,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     MoovieProvider,
     UsersProvider,
-    AuthServiceProvider
+    //AuthServiceProvider
   ]
 })
 export class AppModule {}
