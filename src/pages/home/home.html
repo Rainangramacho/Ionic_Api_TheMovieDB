@@ -5,23 +5,21 @@
 </ion-header>
 
 <ion-content padding>
-<br>
   <h2>Bem vindo ao ShowTime</h2>
-  <!--
   <p>
     Se você ja tem cadastro, é só clicar em "Login", caso ainda não tenha, clique em "Cadastrar-se".
     É rapidinho, confia!
   </p>
--->
-  <br>
-  
-  <button ion-button block (click)="goToLoginPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >Login</button><br>
-  <button ion-button block (click)="goToCreateAccountPage()" style="width: 40%" class="submit-btn" fulltype="submit" >Cadastrar-se</button><br>
-   <button ion-button block (click)="goToUsersListPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >Listar Usuários</button><br>
-  <button ion-button block (click)="goToIntroPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >Voltar</button><br>
-  <!-- <button ion-button block (click)="goToFeedPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >Feed</button><br>
-  <button ion-button block (click)="goToFeedSeriesPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >FeedSeries</button><br>
-  <button ion-button block (click)="goToPosLoginPage()" style="width: 40%"  class="submit-btn" fulltype="submit" >PSL</button><br> -->
-  
-  
+
+  <ion-grid>
+    <ion-row justify-content-center>
+      <ion-col col-10 align-self-center>
+        <div>
+          <button ion-button block style="width: 70%;" (click)="goToLoginPage()" class="submit-btn" fulltype="submit" color="dark">Login</button><br>
+          <button ion-button block style="width: 70%;" (click)="goToCreateAccountPage()" class="submit-btn" fulltype="submit" color="dark">Cadastrar-se</button><br>
+          <button ion-button block style="width: 70%;" (click)="goToIntroPage()" class="submit-btn" fulltype="submit" color="dark">Voltar</button><br>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
