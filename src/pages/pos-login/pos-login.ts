@@ -3,13 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FeedPage } from '../feed/feed';
 import { FeedSeriesPage } from '../feedseries/feedseries';
 
-/**
- * Generated class for the PosLoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-pos-login',
@@ -29,5 +22,4 @@ export class PosLoginPage {
   goToFeedSeriesPage(){
     this.navCtrl.push(FeedSeriesPage)
   }
-
 }

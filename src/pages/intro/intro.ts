@@ -13,10 +13,6 @@ export class IntroPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) { // serve para navegar entre as paginas 
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad IntroPage');
-  }
-
   goToCreateAccount(){
     this.navCtrl.push(CreateAccountPage);
   }

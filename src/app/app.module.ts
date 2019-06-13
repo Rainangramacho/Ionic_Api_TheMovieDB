@@ -9,10 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { PosLoginPage } from './../pages/pos-login/pos-login';
 import { LoginPage } from './../pages/login/login';
 import { CreateAccountPage } from './../pages/create-account/create-account';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
-import { TabsPage } from '../pages/tabs/tabs';
 import { FeedPageModule } from '../pages/feed/feed.module';
 import { FeedSeriesPageModule } from '../pages/feedseries/feedseries.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
@@ -22,10 +19,7 @@ import { UsersProvider } from '../providers/users/users';
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage,
     LoginPage,
     CreateAccountPage,
     PosLoginPage
@@ -41,10 +35,7 @@ import { UsersProvider } from '../providers/users/users';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
     HomePage,
-    TabsPage,
     LoginPage,
     CreateAccountPage,
     PosLoginPage

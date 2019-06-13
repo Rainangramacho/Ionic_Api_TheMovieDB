@@ -1,54 +1,22 @@
-<!--
-  Generated template for the FeedPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
     <ion-title>Séries Populares</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-<h1 class="feedseries_title"></h1> 
-  <ion-card *ngFor="let series of lista_series">
+  <h1 class="feedseries_title"></h1> 
+    <ion-card *ngFor="let series of lista_series">
+      <ion-item>
+        <h2 class="feedseries_title">{{series.name}}</h2><!-- Interpolação para que esse h1 possa receber o conteudo da variavel nome_usuario.-->
+        <p class="feedseries_date">Média pelo TheMovieDb : {{series.vote_average}}</p>
+      </ion-item>
 
-    <ion-item>
-      <h2 class="feedseries_title">{{series.name}}</h2><!-- Interpolação para que esse h1 possa receber o conteudo da variavel nome_usuario.-->
-      <p class="feedseries_date">Média pelo TheMovieDb : {{series.vote_average}}</p>
-    </ion-item>
+      <img [src]="'https://image.tmdb.org/t/p/w300/' + series.backdrop_path"> <!-- w300 é o tamanho da imagem e backdrop é a imagem do filme(tipo um banner do filme)--> 
 
-    <img [src]="'https://image.tmdb.org/t/p/w300/' + series.backdrop_path"> <!-- w300 é o tamanho da imagem e backdrop é a imagem do filme(tipo um banner do filme)--> 
-
-    <ion-card-content>
-      <p>{{series.overview}}</p>
-    </ion-card-content>
-
-    <ion-row>
-      <ion-col>
-        <!-- <button ion-button icon-start clear small>
-          <ion-icon name="thumbs-up"></ion-icon>
-          <div>12 Likes</div>
-        </button> -->
-      </ion-col>
-      <ion-col>
-        <!-- <button ion-button icon-start clear small>
-          <ion-icon name="text"></ion-icon>
-          <div>4 Comments</div>
-        </button> -->
-      </ion-col>
-      <ion-col center text-center>
-        <ion-note>
-          
-        </ion-note>
-      </ion-col>
-    </ion-row>
-
-  </ion-card>
-  <a (click)="goToHomePage()">Voltar</a>
-  
+      <ion-card-content>
+        <p>{{series.overview}}</p>
+      </ion-card-content>
+    </ion-card>
+  <button ion-button color="dark" (click)="goToHomePage()">Voltar</button>
 </ion-content>
